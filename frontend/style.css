@@ -1,0 +1,35 @@
+.description {
+  resize: vertical;
+}
+
+.post {
+  display: flex;
+}
+
+.post__image-wrapper {
+  max-height: 200px;
+  width: 200px;
+  overflow: hidden;
+}
+
+.post__image-wrapper > img {
+  width: 100%;
+  transition: 1s;
+}
+
+.post__image-wrapper > img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 530px) {
+  .post {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post__text-wrapper > h2,
+  .post__text-wrapper > p {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
