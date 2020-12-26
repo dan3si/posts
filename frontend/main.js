@@ -15,7 +15,7 @@ form.onsubmit = (e) => {
   const fr = new FileReader();
 
   fr.onload = async () => {
-    await fetch('http://localhost:5000/data', {
+    await fetch('/data', {
       method: 'POST',
       body: JSON.stringify({
         title: form.elements.title.value,
@@ -31,7 +31,7 @@ form.onsubmit = (e) => {
 };
 
 const updateImages = async () => {
-  const res = await fetch('http://localhost:5000/data');
+  const res = await fetch('/data');
   const data = await res.json()
 
   document.querySelector('.posts').remove();
