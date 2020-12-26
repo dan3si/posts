@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const server = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 server.use(express.static(__dirname + '/frontend'));
 
